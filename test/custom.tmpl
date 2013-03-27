@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jasmine Spec Runner</title>
+
+    <% css.forEach(function(style){ %>
+    <link rel="stylesheet" type="text/css" href="<%= style %>">
+    <% }) %>
+
+    <% with (scripts) { %>
+    <% [].concat(jasmine, vendor, helpers, src, specs, reporters, start).forEach(function(script){ %>
+    <script type="text/javascript" src="<%= script %>"></script>
+    <% }) %>
+    <% }; %>
+
+  </head>
+
+  <body>
+  </body>
+</html>

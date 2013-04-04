@@ -5,6 +5,7 @@ Luminis = (function(){
     return { version : "0.0.0" };
 })();
 (function($, _, Backbone, Luminis){
+    "use strict";
     var MessageModel = Backbone.Model.extend({
         defaults : {
             id : 0,

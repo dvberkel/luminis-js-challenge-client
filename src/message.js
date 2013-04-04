@@ -1,5 +1,6 @@
 /*globals jQuery:false, _:false, Backbone:false, Luminis:true*/
 (function($, _, Backbone, Luminis){
+    "use strict";
     var MessageModel = Backbone.Model.extend({
         defaults : {
             id : 0,

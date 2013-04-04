@@ -76,6 +76,13 @@ module.exports = function(grunt) {
             lib_test: {
                 files: '<%= jshint.lib_test.src %>',
                 tasks: ['jshint:lib_test']
+            },
+            jasmine: {
+                files: [ '<%= jasmine.customTemplate.src %>', 
+                         '<%= jasmine.customTemplate.options.specs %>', 
+                         '<%= jasmine.customTemplate.options.helpers %>'
+                       ],
+                tasks: ['jasmine:customTemplate']
             }
         }
     });

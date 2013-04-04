@@ -15,6 +15,7 @@ module.exports = function(grunt) {
             customTemplate: {
                 src: 'src/**/*.js',
                 options: {
+                    vendor: [ 'components/jquery/jquery.min.js' ],
                     specs: 'spec/*Spec.js',
                     helpers: 'spec/*Helper.js',
                     template: 'test/custom.tmpl'
@@ -29,6 +30,13 @@ module.exports = function(grunt) {
             dist: {
                 src: ['src/namespace.js'],
                 dest: 'dist/<%= pkg.name %>.js'
+            }
+        },
+        copy : {
+            main : {
+                files : [
+                    { src: 'components/**', dest: 'dist/' }
+                ]
             }
         },
         uglify: {
@@ -93,8 +101,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'jasmine', 'concat', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'jasmine', 'concat', 'uglify', 'copy']);
 
 };

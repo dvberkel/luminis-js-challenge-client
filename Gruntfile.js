@@ -13,12 +13,14 @@ module.exports = function(grunt) {
         // Task configuration.
         jasmine: {
             customTemplate: {
-                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js' ],
+                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js', 'src/timeline.js' ],
                 options: {
                     vendor: [ 
-                        'components/jquery/jquery.min.js', 
+                        'components/jquery/jquery.min.js',
+			'components/jasmine-jquery/lib/jasmine-jquery.js',
                         'components/underscore/underscore-min.js',
-                        'components/backbone/backbone-min.js'
+                        'components/backbone/backbone-min.js',
+                        'components/TimelineJS/compiled/js/storyjs-embed.js'
                     ],
                     specs: 'spec/*Spec.js',
                     helpers: 'spec/*Helper.js',
@@ -32,7 +34,7 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             dist: {
-                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js' ],
+                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js', 'src/timeline.js' ],
                 dest: 'dist/<%= pkg.name %>.js'
             }
         },

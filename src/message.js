@@ -1,9 +1,4 @@
-/*! luminis-js-challenge-client - v0.0.0 - 2013-04-04
-* Copyright (c) 2013 ; Licensed  */
-Luminis = (function(){
-    "use strict";
-    return { version : "0.0.0" };
-})();
+/*globals jQuery:false, _:false, Backbone:false, Luminis:true*/
 (function($, _, Backbone, Luminis){
     var MessageModel = Backbone.Model.extend({
         defaults : {

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         // Task configuration.
         jasmine: {
             customTemplate: {
-                src: [ 'src/namespace.js', 'src/message.js' ],
+                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js' ],
                 options: {
                     vendor: [ 
                         'components/jquery/jquery.min.js', 
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             dist: {
-                src: [ 'src/namespace.js', 'src/message.js' ],
+                src: [ 'src/namespace.js', 'src/message.js', 'src/parameters.js' ],
                 dest: 'dist/<%= pkg.name %>.js'
             }
         },

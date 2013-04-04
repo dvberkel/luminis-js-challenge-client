@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             dist: {
-                src: ['lib/<%= pkg.name %>.js'],
+                src: ['src/namespace.js'],
                 dest: 'dist/<%= pkg.name %>.js'
             }
         },
@@ -55,14 +55,17 @@ module.exports = function(grunt) {
                 eqnull: true,
                 browser: true,
                 globals: {
-                    jQuery: true
+                    jQuery: true,
+                    describe: false,
+                    it: false,
+                    expect: false
                 }
             },
             gruntfile: {
                 src: 'Gruntfile.js'
             },
             lib_test: {
-                src: ['lib/**/*.js', 'test/**/*.js']
+                src: ['src/**/*.js', 'spec/**/*.js']
             }
         },
         watch: {

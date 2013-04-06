@@ -1,4 +1,4 @@
-Luminis JS Challenge Client
+Luminis JS Challenge Client [![Build Status](https://travis-ci.org/dvberkel/luminis-js-challenge-client.png?branch=master)](https://travis-ci.org/dvberkel/luminis-js-challenge-client)
 ===========================
 
 This repository contains a client to the [Luminis JS Challenge Server][server].

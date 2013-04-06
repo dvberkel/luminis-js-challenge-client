@@ -102,8 +102,8 @@ Luminis = (function(){
             this.$el.empty();
             createStoryJS({
                 type:       'timeline',
-                width:      '800',
-                height:     '600',
+                width:      this.options.width || 800,
+                height:     this.options.height || 600,
                 source:     this.timelineSource(),
                 embed_id:   this.el.id
             });

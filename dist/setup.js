@@ -5,7 +5,12 @@
 	var server = Luminis.from(document.URL).get("server") || "http://luminisjschallenge.herokuapp.com";
 
 	var messages = new Luminis.Messages();
-	new Luminis.TimeLineView({ model : messages, el: $("#container") });
+	new Luminis.TimeLineView({ 
+	    model : messages, 
+	    el: $("#container"), 
+	    width: window.innerWidth,
+	    height: window.innerHeight
+	});
 
 	$.getJSON(server, function(data){
 	    _.each(data, function(user){

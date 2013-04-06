@@ -1,23 +1,22 @@
 /*global jQuery:false, _:false, Luminis:false*/
 (function($, _, Luminis){
+    "use strict";
     $(function(){
 	var server = Luminis.from(document.URL).get("server") || "http://luminisjschallenge.herokuapp.com";
-	console.log(server);
 
 	var messages = new Luminis.Messages();
+	new Luminis.TimeLineView({ model : messages, el: $("#container") });
+
 	$.getJSON(server, function(data){
 	    _.each(data, function(user){
-		console.log(user);
 		$.getJSON(server + '/' + user.name, function(userMessages){
 		    _.each(userMessages, function(message){
-			message.reciever = user.name;
-			console.log(message);
+			message.receiver = user.name;
 			messages.add(message);
 		    });
 		});
-	    })
+	    });
 	});
 
-	new Luminis.TimeLineView({ model : messages, el: $("#container") });
     });
 })(jQuery, _, Luminis);

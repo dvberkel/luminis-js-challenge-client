@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 options: {
                     vendor: [ 
                         'components/jquery/jquery.min.js',
-			'components/jasmine-jquery/lib/jasmine-jquery.js',
+                        'components/jasmine-jquery/lib/jasmine-jquery.js',
                         'components/underscore/underscore-min.js',
                         'components/backbone/backbone-min.js',
                         'components/TimelineJS/compiled/js/storyjs-embed.js'
@@ -72,6 +72,7 @@ module.exports = function(grunt) {
                     jQuery: true,
                     describe: false,
                     it: false,
+                    xit: false,
                     expect: false
                 }
             },

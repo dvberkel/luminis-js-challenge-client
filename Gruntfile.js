@@ -99,7 +99,16 @@ module.exports = function(grunt) {
                        ],
                 tasks: ['jasmine:customTemplate']
             }
-        }
+        },
+	zip: {
+	    distribution: {
+		src: [ "dist/**/*"],
+		dest: "distribution.zip",
+		options : {
+		    base: "dist/"
+		}
+	    }
+	}
     });
 
     // These plugins provide necessary tasks.
@@ -109,6 +118,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-zipstream');
 
     // Default task.
     grunt.registerTask('default', ['jshint', 'jasmine', 'concat', 'uglify', 'copy']);

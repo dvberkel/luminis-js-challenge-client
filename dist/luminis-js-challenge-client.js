@@ -1,4 +1,4 @@
-/*! luminis-js-challenge-client - v0.0.0 - 2013-04-06
+/*! luminis-js-challenge-client - v0.0.0 - 2013-04-07
 * Copyright (c) 2013 ; Licensed  */
 Luminis = (function(){
     "use strict";

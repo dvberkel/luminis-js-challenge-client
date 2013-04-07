@@ -100,15 +100,15 @@ module.exports = function(grunt) {
                 tasks: ['jasmine:customTemplate']
             }
         },
-	zip: {
-	    distribution: {
-		src: [ "dist/**/*"],
-		dest: "distribution.zip",
-		options : {
-		    base: "dist/"
-		}
-	    }
-	}
+        zip: {
+            distribution: {
+                src: [ "dist/**/*"],
+                dest: "distribution.zip",
+                options : {
+                    base: "dist/"
+                }
+            }
+        }
     });
 
     // These plugins provide necessary tasks.

@@ -1,6 +1,6 @@
 {
   "name": "luminis-js-challenge-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A client to the Luminis JS Challenge Server",
   "main": "index.js",
   "scripts": {

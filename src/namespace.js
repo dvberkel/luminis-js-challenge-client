@@ -1,5 +1,5 @@
 /*global Luminis:true*/
 Luminis = (function(){
     "use strict";
-    return { version : "0.0.1" };
+    return { version : "0.0.2" };
 })();

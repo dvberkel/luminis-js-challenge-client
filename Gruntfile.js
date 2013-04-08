@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         zip: {
             distribution: {
                 src: [ "dist/**/*"],
-                dest: "distribution.zip",
+                dest: "distribution-<%= pkg.version %>.zip",
                 options : {
                     base: "dist/"
                 }

@@ -1,9 +1,10 @@
-/*! luminis-js-challenge-client - v0.0.0 - 2013-04-07
+/*! luminis-js-challenge-client - v0.0.1 - 2013-04-08
 * Copyright (c) 2013 ; Licensed  */
 Luminis = (function(){
     "use strict";
-    return { version : "0.0.0" };
+    return { version : "0.0.1" };
 })();
+
 (function($, _, Backbone, Luminis){
     "use strict";
     var timestampRegex = /\w+\s+(\w{3})\s+(\d{2})\s+(\d{4})\s+(\d{2}):(\d{2}):(\d{2})/;
@@ -90,7 +91,8 @@ Luminis = (function(){
 (function($, _, Backbone, Luminis){
     "use strict";
 
-    var template = _.template("<%= year %>,<%= month %>,<%= day %>,<%= hour %>,<%= minutes %>");
+    var dateTemplate = _.template("<%= year %>,<%= month %>,<%= day %>,<%= hour %>,<%= minutes %>");
+    var textTemplate = _.template("@<%= receiver %>: <%= content %>");
 
     var TimeLineView = Backbone.View.extend({
         initialize : function(){
@@ -138,10 +140,10 @@ Luminis = (function(){
             this.model.each(function(message){ 
                 dates.push(
                     {
-                        startDate: template(message.model.startDate()),
-                        endDate: template(message.model.endDate()),
+                        startDate: dateTemplate(message.startDate()),
+                        endDate: dateTemplate(message.endDate()),
                         headline: message.get("sender"),
-                        text: message.get("content")
+                        text: textTemplate(message.toJSON())
                     }
                 );
             });
